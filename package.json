@@ -1,0 +1,26 @@
+{
+  "name": "vuepress-theme-millidocs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Vuepress documentation theme based on Milligram",
+  "author": "Alexander Heimbuch <github@heimbu.ch>",
+  "scripts": {
+    "dev": "vuepress dev docs"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.5.0-rc.1",
+    "lodash": "^4.17.10",
+    "normalize.css": "^8.0.0",
+    "object-mapper": "^5.0.0",
+    "vue": "^2.5.16",
+    "vue-moment": "^4.0.0",
+    "vue-observable": "^0.1.1",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "vuepress": "^0.13.1",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3"
+  }
+}
