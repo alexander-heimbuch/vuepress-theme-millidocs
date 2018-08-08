@@ -19,7 +19,7 @@
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
-    "vuepress": "^0.13.1",
+    "vuepress": "^0.14.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3"
   }
