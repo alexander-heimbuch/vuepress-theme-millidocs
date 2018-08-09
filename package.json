@@ -3,7 +3,11 @@
   "version": "0.5.0",
   "license": "MIT",
   "description": "Vuepress documentation theme based on Milligram",
-  "author": "Alexander Heimbuch <github@heimbu.ch>",
+  "author": "Alexander Heimbuch <npm@heimbu.ch>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexander-heimbuch/vuepress-theme-millidocs.git"
+  },
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
