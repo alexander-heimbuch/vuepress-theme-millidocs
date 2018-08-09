@@ -11,9 +11,9 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "prepare:clean": "rm -rf publish && mkdir -p publish",
-    "prepare:copy": "cp -R docs/.vuepress/theme/* publish/ && cp package.json publish/",
-    "prepare": "npm run prepare:clean && npm run prepare:copy"
+    "bundle:clean": "rm -rf publish && mkdir -p publish",
+    "bundle:copy": "cp -R docs/.vuepress/theme/* publish/ && cp package.json publish/",
+    "bundle": "npm run bundle:clean && npm run bundle:copy"
   },
   "dependencies": {
     "lodash": "^4.17.10",
