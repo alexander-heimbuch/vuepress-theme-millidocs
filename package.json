@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-millidocs",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "license": "MIT",
   "description": "Vuepress documentation theme based on Milligram",
   "author": "Alexander Heimbuch <npm@heimbu.ch>",
