@@ -12,8 +12,6 @@ Not every page by default is part of the navigation. If you want to add a page t
 
 ```
 ---
-layout: page
-title: Navigation
 navigation: 2
 ---
 ```

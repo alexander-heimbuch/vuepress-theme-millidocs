@@ -5,45 +5,30 @@ navigation: 1
 
 # Millidocs Theme
 
-Simple documentation theme for Jekyll featuring [Milligram CSS framework](http://milligram.io/), [PrismJS syntax highlighter](http://prismjs.com/) and [LunrJS search](https://lunrjs.com/).
+Simple documentation theme for VuePress featuring [Milligram CSS framework](http://milligram.io/).
 
-One of the core features is a full text client side search and full responsiveness. It has zero dependencies with other gems and should be easily build with Github.
+One of the core features is a client side search and full responsiveness.
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+Install the npm package:
 
-```ruby
-gem "millidocs"
+```bash
+$ npm i vuepress-theme-millidocs --save
+# or
+$ yarn add vuepress-theme-millidocs
 ```
 
-Adapt your Jekyll site config `_config.yml`:
+Adapt your vuepress config `config.js`:
 
-```yaml
-  title: My Docs Page Title
-  description: MY description
-  url: "https://base/url/site"
-  theme: millidocs
-
-  markdown: kramdown
-  kramdown:
-    syntax_highlighter_opts:
-      disable : true
-
-  exclude:
-    - Gemfile
-    - Gemfile.lock
-    - README.md
+```js
+module.exports = {
+  title: 'My page Title',
+  description: 'My docs description',
+  theme: 'milidocs'
+}
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install millidocs
 
 ## Available Layouts
 
-This theme is made for _pages_ only and doesn't support _posts_ by default. So the only available layouts are `default` and `page`.
+This theme is made for _pages_ only and doesn't support _posts_ by default.

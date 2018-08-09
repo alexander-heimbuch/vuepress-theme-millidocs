@@ -1,5 +1,4 @@
 import Vuex from 'vuex'
-import moment from 'vue-moment'
 import { sync } from 'vuex-router-sync'
 
 import createStore from './store'
@@ -13,7 +12,6 @@ export default ({
   router
 }) => {
   Vue.use(Vuex)
-  Vue.use(moment)
 
   const store = createStore()
   sync(store, router)

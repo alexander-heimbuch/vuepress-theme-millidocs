@@ -17,7 +17,5 @@ export default {
     return searchResults(state.pages, state.search)
   },
 
-  navigation: state => ({
-    open: get(state, 'navigation.open', false)
-  })
+  sidebarOpen: getOr(false, 'sidebarOpen')
 }

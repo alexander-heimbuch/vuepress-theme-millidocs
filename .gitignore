@@ -3,4 +3,5 @@ node_modules/
 data/
 build/
 dist/
-docs/.vuepress/theme
+.vuepress/dist
+publish/

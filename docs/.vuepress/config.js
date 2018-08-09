@@ -1,5 +1,3 @@
-const { resolve } = require('path')
-
 module.exports = {
   title: 'VuePress Millidocs',
   description: 'Simple documentation theme featuring Milligram CSS framework',
