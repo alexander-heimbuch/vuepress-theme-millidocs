@@ -22,11 +22,10 @@ export default {
 
 <style lang="scss">
   @import './styles/variables';
+  @import '~milligram-scss';
+  @import '~prismjs/themes/prism.css';
 
   .wrapper {
-    @import '~prismjs/themes/prism.css';
-    @import '~milligram-scss';
-
     height: 100%;
     width: 100%;
     max-height: 100%;
