@@ -5,6 +5,7 @@ import createStore from './store'
 import types from './store/types'
 
 import Layout from './Layout'
+import Empty from './Empty'
 
 export default ({
   Vue,
@@ -16,16 +17,13 @@ export default ({
   const store = createStore()
   sync(store, router)
 
-  router.addRoutes([
-    { path: '/tags/*', component: Layout }
-  ])
-
   router.beforeResolve((to, from, next) => {
     // If this isn't an initial page load.
     if (to.name) {
       // Start the route progress bar.
       store.commit(types.LOAD_START)
     }
+
     next()
   })
 

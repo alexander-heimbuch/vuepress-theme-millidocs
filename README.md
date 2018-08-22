@@ -1,8 +1,3 @@
----
-title: Overview
-navigation: 1
----
-
 # Millidocs Theme
 
 Simple documentation theme for VuePress featuring [Milligram CSS framework](http://milligram.io/).

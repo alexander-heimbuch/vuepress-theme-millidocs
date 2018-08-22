@@ -17,5 +17,7 @@ export default {
     return searchResults(state.pages, state.search)
   },
 
+  layout: getOr('default', 'current.layout'),
+
   sidebarOpen: getOr(false, 'sidebarOpen')
 }

@@ -1,23 +1,17 @@
 <template>
-  <div class="wrapper">
-    <sidebar></sidebar>
-    <main class="layout">
-      <div class="inner">
-        <Content />
-      </div>
-    </main>
-  </div>
+  <component :is="layout"></component>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
 
-import Sidebar from './Sidebar'
-import Preloader from './partials/Preloader'
+import Default from './Default'
+import Empty from './Empty'
 
 export default {
-  components: { Sidebar, Preloader },
+  components: { Default, Empty },
   methods: mapActions([ 'updateSite', 'updatePage' ]),
+  computed: mapGetters([ 'layout' ]),
   watch: {
     $page() {
       this.updatePage(this.$page)
@@ -31,9 +25,35 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '~milligram-scss';
-  @import '~prismjs/themes/prism.css';
   @import './styles/variables';
+  @import '~milligram-scss/src/Color';
+  // Base
+  // ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+  // Set box-sizing globally to handle padding and border widths
+  *,
+  *:after,
+  *:before {
+    box-sizing: inherit;
+  }
+
+  // The base font-size is set at 62.5% for having the convenience
+  // of sizing rems in a way that is similar to using px: 1.6rem = 16px
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+
+  // Default body styles
+  body {
+    color: $color-secondary;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.6em; // Currently ems cause chrome bug misinterpreting rems on body element
+    font-weight: 300;
+    letter-spacing: .01em;
+    line-height: 1.6;
+  }
+
 
   html, body, #app {
     margin: 0;
@@ -42,81 +62,4 @@ export default {
     overflow: hidden;
     min-width: $min-width;
   }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  pre {
-    margin-bottom: ($base-height * 2) !important;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-
-    &:hover {
-      color: $link-color;
-      text-decoration: none;
-    }
-  }
-
-  .wrapper {
-    height: 100%;
-    width: 100%;
-    max-height: 100%;
-    min-height: 100%;
-    display: flex;
-    overflow: hidden;
-  }
-
-  // Content
-  .layout {
-    display: flex;
-    justify-content: center;
-    min-height: 100%;
-    height: 100%;
-    width: 100%;
-    overflow-y: auto;
-    color: $content-color;
-    line-height: 1.7;
-    word-wrap: break-word;
-  }
-
-  .inner {
-    width: 100%;
-    max-width: $content-width;
-    padding: $base-height ($base-height * 2) ($base-height * 3) $base-height;
-  }
-
-  .section {
-    margin-bottom: $base-height;
-  }
-
-  pre {
-    code {
-      background: transparent;
-    }
-  }
-
-  /**
-* Mobile
-*/
-@media (max-width: $mobile-width) {
-	.wrapper {
-		flex-direction: column;
-	}
-
-	.layout {
-		width: 100%;
-		margin-top: 0;
-		height: calc(100% - #{$header-height});
-		min-height: calc(100% - #{$header-height});
-	}
-
-	.inner {
-		padding: $base-height;
-	}
-}
-
 </style>
