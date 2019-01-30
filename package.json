@@ -8,6 +8,7 @@
     "type": "git",
     "url": "https://github.com/alexander-heimbuch/vuepress-theme-millidocs.git"
   },
+  "main": "enhanceApp.js",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "rm -rf dist/ && vuepress build docs --dest dist/",
